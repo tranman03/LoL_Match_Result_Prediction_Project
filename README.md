@@ -4,7 +4,7 @@ by Adam Tran (ant010@ucsd.edu)
 In this project, I developed a model to predict the outcome of matches based on match data at minute 15. 
 All of my work is in the corresponding Jupyter notebook, so I recommend referring to that in tandem, as you read along.
 
-Note: Our exploratory data analysis on this dataset can be found [Here](https://github.com/tranman03/LoL_LeeSin_Project.git)
+Note: Our exploratory data analysis on this dataset can be found [here](https://github.com/tranman03/LoL_LeeSin_Project.git)
 
 ## Framing The Problem
 The prediction problem I will be looking at is predicting the outcome of the matches. To be more specific, I want to look at the game at 15 minutes and predict which team will win and which will lose. Because of this we will be able to use the data at 10 and 15 minutes in our model. Data concerning objectives such as dragons and towers may be harder to use since we don't have time stamps for these objectives, and thus don't know if we would have this information at the time of prediction. This would be a binary classification type problem as we are trying to classify each match as a win (1) or loss (0). For this problem, the response variable would be "result," because as I said we will be trying to predict wins or losses. For this problem, there are no clear negative consequences to having a high false positive or high false negative other than our model being not as accurate. Thus we will use accuracy as our metric to evaluate the model. Furthermore, since for every loss there is also a win, there is no class imbalance. This makes accuracy a suitable classifying metric.
